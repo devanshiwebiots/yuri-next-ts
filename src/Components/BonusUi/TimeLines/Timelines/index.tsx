@@ -1,7 +1,6 @@
 import { Card, CardBody, Col } from "reactstrap";
 import { TimelineTitle } from "@/Constants";
 import AppIdeasTimeline from "./AppIdeasTimeline";
-import { VerticalTimeline } from "react-vertical-timeline-component";
 import BlogTimeline from "./BlogTimeline";
 import CommonCardHeader from "@/CommonComponents/CommonCardHeader";
 import { TimeLineData } from "@/Data/BonusUi/Timeline";

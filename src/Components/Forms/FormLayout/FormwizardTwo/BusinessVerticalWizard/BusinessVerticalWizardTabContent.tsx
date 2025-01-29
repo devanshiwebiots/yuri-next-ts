@@ -5,7 +5,6 @@ import ContactDetailsForm from "./ContactDetailsForm";
 import PayDetailsForm from "./PayDetailsForm";
 import { BusinessFormCommonProps } from "@/Types/Form";
 import FinishForm from "../../FormWizardOne/Common/FinishForm";
-// import FinishForm from "../../FormWizardOne/Common/FinishForm";
 
 const BusinessVerticalWizardTabContent :React.FC<BusinessFormCommonProps> = ({ activeTab, callbackActive }) => {
   return (

@@ -74,22 +74,27 @@ export const CssData = `
                 user-zoom: fixed;
                 } `;
 
-export const phpData = `
-                      <?php
-                      function nfact($n) {
-                      if ($n == 0) {
-                      return 1;
-                      }
-                      else {
-                      return $n * nfact($n - 1);
-                      }
-                      }
-                      echo "Please enter a whole number ... ";
-                      $num = trim(fgets(STDIN));
-                      // ===== PROCESS - Determing the factorial of the input number =====
-                      $output = "Factorial " . $num . " = " . nfact($num) . "";
-                      echo $output;
-                      ?>;`
+export const typeScriptData = `
+class Animal{  
+    String color="white";  
+}  
+
+class Dog extends Animal{  
+String color="black";  
+void printColor(){  
+    System.out.println(color);//prints color of Dog class  
+    System.out.println(super.color);
+}    
+}  
+
+class TestSuper1{  
+public static void main(String args[]){  
+    Dog d=new Dog();  
+    d.printColor();  
+}
+}  
+`;
+
 
 //Quill editor
 export const StandardQuillText = `<div class="quill-paragraph" id="editor7">

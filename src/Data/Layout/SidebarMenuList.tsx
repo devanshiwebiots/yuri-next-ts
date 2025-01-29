@@ -567,9 +567,9 @@ export const menuList: SidebarMenuType[] = [
             url: `/components/bonus-ui/sweet-alert-2`,
           },
           {
-            title: "Owl Carousel",
+            title: "Carousel",
             type: "link",
-            url: `/components/bonus-ui/owl-carousel`,
+            url: `/components/bonus-ui/carousel`,
           },
           {
             title: "Ribbons",
@@ -982,9 +982,9 @@ export const menuList: SidebarMenuType[] = [
         active: false,
         subMenu: [
           {
-            title: "Quill Editor",
+            title: "CK Editor",
             type: "link",
-            url: `/miscellaneous/editors/quill-editor`,
+            url: `/miscellaneous/editors/ck-editor`,
           },
           {
             title: "ACE Code Editor",

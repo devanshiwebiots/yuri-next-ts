@@ -9,7 +9,7 @@ const MultiFileUpload = () => {
     <Col lg="6">
       <Card className="title-line dropzone-secondary">
         <CommonCardHeader title={MultiFileUploads} span={FileUploadData} />
-        <CommonFileUpload multiple={true} body={true} />
+        <CommonFileUpload multiple />
       </Card>
     </Col>
   );

@@ -3,7 +3,6 @@ import { horizontalVariationDropdown, horizontalVariationOutline, horizontalVari
 import { Fragment } from 'react'
 import { Button, ButtonGroup, Col, Input, Label } from 'reactstrap'
 import DropdownCommon from '../../CommonButtonDropdown'
-// import DropdownCommon from '../../../../Utils/CommonComponents/DropdownCommon'
 
 export default function HorizontalVariation() {
     return (

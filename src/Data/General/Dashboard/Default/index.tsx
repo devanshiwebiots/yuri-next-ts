@@ -1,4 +1,3 @@
-//@ts-nocheck
 import SvgIcon from "@/CommonComponents/CommonIcons/CommonSvgIcons";
 import { Href } from "@/Constants";
 import { ApexOptions } from "apexcharts";
@@ -27,7 +26,6 @@ export const EarningChartOptions: ApexOptions = {
       borderRadius: 4,
       horizontal: false,
       columnWidth: "40%",
-      endingShape: "rounded",
     },
   },
   grid: {
@@ -68,10 +66,6 @@ export const EarningChartOptions: ApexOptions = {
     },
   },
   colors: ["var(--theme-default)", "#f99b0d"],
-  // fill: {
-  //   type: ["solid", "gradient"],
-  //   opacity: 1,
-  // },
   legend: {
     show: false,
   },

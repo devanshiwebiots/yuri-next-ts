@@ -1,13 +1,25 @@
-//@ts-nocheck
 import CommonCardHeader from "@/CommonComponents/CommonCardHeader";
 import { ClipboardOnParagraphs, Copy, CopyFromParagraph } from "@/Constants";
-import { ClipBoardParaGraph } from "@/Data/Forms";
 import { useState } from "react";
-// import CopyToClipboard from "react-copy-to-clipboard";
+import { toast } from "react-toastify";
 import { Button, Card, CardBody, Col } from "reactstrap";
 
 const ClipboardOnParagraph = () => {
-  const [clipBoardValues, setClipBoardValues] = useState({ value: ClipBoardParaGraph, copied: false });
+    const ClipBoardParaGraph: string = "On that day, hopes and dreams were crushed. Even though it should have been anticipated, it nonetheless surprised me. The warning indicators have been disregarded in favour of the slim chance that it would actually occur. From a hopeful prospect, it had evolved into an unquestionable conviction that it must be fate. That was up until it wasn't, at which point all of the aspirations and dreams collapsed.";
+    const [clipBoardValues, setClipBoardValues] = useState({ value: ClipBoardParaGraph, copied: false });
+
+    const handleCopy = async () => {
+      try {
+        await navigator.clipboard.writeText(clipBoardValues.value);
+        setClipBoardValues({ ...clipBoardValues, copied: true });
+
+        setTimeout(() => {
+          setClipBoardValues({ ...clipBoardValues, copied: false });
+        }, 2000);
+      } catch (err) {
+        toast.error("Failed to copy text: " + err);
+      }
+    };
 
   return (
     <Col sm="12" md="6">
@@ -16,15 +28,12 @@ const ClipboardOnParagraph = () => {
         <CardBody>
           <div className="clipboaard-container">
             <p className="card-description">{CopyFromParagraph}</p>
-            {/* <CopyToClipboard text={clipBoardValues.value} onCopy={(value) => setClipBoardValues({ value, copied: true })}>
-              <h6 className="border rounded p-3 f-w-300">{ClipBoardParaGraph}</h6>
-            </CopyToClipboard> */}
+            <h6 className="border rounded p-3 f-w-300">{ClipBoardParaGraph}</h6>
             <div className="mt-3 text-end">
-              {/* <CopyToClipboard text={clipBoardValues.value} onCopy={(value) => setClipBoardValues({ value, copied: true })}>
-                <Button className="btn-clipboard" color="info">
-                  <i className="fa fa-copy"></i> {Copy}
-                </Button>
-              </CopyToClipboard> */}
+              <Button className="btn-clipboard" color="info" onClick={handleCopy}>
+                <i className="fa fa-copy"></i> {Copy}
+              </Button>
+              {clipBoardValues.copied && <span className="ms-2 text-success">Copied!</span>}
             </div>
           </div>
         </CardBody>

@@ -9,7 +9,7 @@ const SingleFileUpload = () => {
     <Col lg="6">
       <Card className="title-line default-dropzone">
         <CommonCardHeader title={SingleFileUploads} span={FileUploadData} />
-          <CommonFileUpload maxFiles={1} body={true}/>
+          <CommonFileUpload />
       </Card>
     </Col>
   );

@@ -5,13 +5,18 @@ import Print from "../Common/Print";
 import InvoiceFiveHeader from "./InvoiceFiveHeader";
 import InvoiceNumber from "./InvoiceNumber";
 import InvoiceTable from "./InvoiceTable";
+import { useReactToPrint } from "react-to-print";
 
 export default function Invoice5Container() {
-  const componentRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
+  const handlePrint = useReactToPrint({
+    contentRef,
+  });
 
   return (
     <Container>
-      <div ref={componentRef}>
+      <div ref={contentRef}>
         <Card className="invoice-2">
           <CardBody>
             <Table className="custom-scrollbar" responsive borderless>
@@ -27,8 +32,8 @@ export default function Invoice5Container() {
                 </tr>
                 <tr style={{ width: "100%", display: "flex", justifyContent: "space-between", marginTop: 36 }}>
                   <CommonInvoiceSign />
-                  <td style={{padding:0}}>
-                    <Print componentRef={componentRef} />
+                  <td style={{ padding: 0 }}>
+                    <Print handlePrint={handlePrint} />
                   </td>
                 </tr>
               </tbody>

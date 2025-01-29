@@ -4,7 +4,6 @@ import BankInfoForm from "./BankInfoForm";
 import InquiresForm from "./InquiresForm";
 import { BusinessFormCommonProps } from "@/Types/Form";
 import FinishForm from "../../FormWizardOne/Common/FinishForm";
-// import FinishForm from "../../FormWizardOne/Common/FinishForm";
 
 const CustomHorizontalWizardFormTabContent: React.FC<BusinessFormCommonProps> = ({ activeTab, callbackActive, differentId }) => {
   return (

@@ -148,7 +148,6 @@ export const ProductChart: ApexOptions = {
     curve: "smooth",
   },
   xaxis: {
-    //   show: false,
     type: "datetime",
     categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00", "2018-09-19T07:30:00", "2018-09-19T08:30:00", "2018-09-19T09:30:00", "2018-09-19T10:30:00"],
     labels: {
@@ -347,11 +346,6 @@ export const SkillChart: ApexOptions = {
     labels: {
       colors: "#2C323F",
     },
-    // markers: {
-    //   width: 86,
-    //   height: 18,
-    //   radius: 3,
-    // },
   },
   colors: ["#F94C8E", "#009DB5", "#51bb25"],
   responsive: [
@@ -974,11 +968,6 @@ export const CryptoCurrencyPrice: ApexOptions = {
       data: [20, 120, 15, 100, 120, 60, 150, 70, 100, 80, 105, 20, 70, 60, 10, 12, 10, 130, 60, 80, 40, 140, 110, 150, 30, 75, 20, 45, 15, 130, 10, 30, 15, 110, 65, 130, 0],
     },
   ],
-  tooltip: {
-    x: {
-      // format: "dd/MM/yy HH:mm",
-    },
-  },
   responsive: [
     {
         breakpoint: 576,
@@ -1581,7 +1570,6 @@ export const OrderStatusChart:ApexOptions = {
     stacked: true,
     animations: {
       enabled: true,
-      easing: "linear",
       dynamicAnimation: {
         speed: 1000,
       },

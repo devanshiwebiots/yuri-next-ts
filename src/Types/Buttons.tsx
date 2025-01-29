@@ -1,6 +1,4 @@
 import { Direction } from "reactstrap/types/lib/Dropdown";
-// import { SubTitleObjectProps } from "./CommonComponent.type";
-
 export interface SubTitleObjectProps {
   text?: string;
   code?: string;

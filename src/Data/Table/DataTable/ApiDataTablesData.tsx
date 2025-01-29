@@ -29,31 +29,26 @@ export const AddRowColumn :TableColumn<AddRowsTable>[] = [
   {
     name: "Column1",
     selector: (row) => row.column1,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Column2",
     selector: (row) => row.column2,
-    sortable: true,
-    center: true,
+    sortable: true,    
   },
   {
     name: "Column3",
     selector: (row) => row.column3,
-    sortable: true,
-    center: true,
+    sortable: true,    
   },
   {
     name: "Column4",
     cell: (row) => row.column4,
-    sortable: true,
-    center: true,
+    sortable: true,    
   },
   {
     name: "Column5",
     cell: (row) => row.column5,
-    sortable: true,
-    center: true,
+    sortable: true,    
   },
 ];

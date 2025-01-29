@@ -348,50 +348,42 @@ export const OrderHistoryDataColumn: TableColumn<OrderHistoryTableColumns>[] = [
   {
     name: "Product",
     cell: (row) => <OrderHistoryImage name={row.image} />,
-    center: true,
   },
   {
     name: "Product Name",
     selector: (row) => `${row.productName}`,
     cell: (row) => <OrderDataHistory name={row.productName} tag={row.tag} />,
-    sortable: true,
-    center: true,
+    sortable: true,    
     grow: 2,
   },
   {
     name: "Size",
     selector: (row) => `${row.size}`,
-    sortable: true,
-    center: true,
+    sortable: true,    
   },
   {
     name: "Color",
     selector: (row) => `${row.color}`,
-    sortable: true,
-    center: true,
+    sortable: true,    
   },
   {
     name: "Article Number",
     selector: (row) => row["articleNumber"],
-    sortable: true,
-    center: true,
+    sortable: true,    
     grow: 2,
   },
   {
     name: "Units",
-    selector: (row) => row["units"],
-    center: true,
+    selector: (row) => row["units"],    
   },
   {
     name: "Price",
     selector: (row) => row["price"],
-    sortable: true,
-    center: true,
+    sortable: true,    
   },
   {
     name: <MoreVertical />,
-    cell: (row) => row["icon"],
-    center: true,
+    cell: (row) => row["icon"],    
   },
 ];
 

@@ -4,13 +4,18 @@ import Invoice6Button from "./Invoice6Button";
 import InvoiceSixHeader from "./InvoiceSixHeader";
 import InvoiceSixTable from "./InvoiceSixTable";
 import UserDetails from "./UserDetails";
+import { useReactToPrint } from "react-to-print";
 
 export default function Invoice6Container() {
-  const componentRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
+  const handlePrint = useReactToPrint({
+    contentRef,
+  });
 
   return (
     <Container>
-      <div ref={componentRef}>
+      <div ref={contentRef}>
         <Row>
           <Col sm={12}>
             <Card>
@@ -22,7 +27,7 @@ export default function Invoice6Container() {
                     <UserDetails />
                     <InvoiceSixTable />
                   </div>
-                  <Invoice6Button componentRef={componentRef} />
+                  <Invoice6Button handlePrint={handlePrint} />
                 </div>
               </CardBody>
             </Card>

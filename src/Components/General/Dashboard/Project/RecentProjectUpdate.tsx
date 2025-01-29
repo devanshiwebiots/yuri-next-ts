@@ -9,7 +9,7 @@ import { Grid } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const RecentProjectUpdate = () => {
-  const swiperRef = useRef<any>();
+  const swiperRef = useRef<any>(null);
 
   return (
     <Col xl={5} className="box-col-5">

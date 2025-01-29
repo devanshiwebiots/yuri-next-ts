@@ -4,7 +4,6 @@ import { useAppDispatch, useAppSelector } from "@/ReduxToolkit/Hooks";
 import { handleBookmarkChange } from "@/ReduxToolkit/Reducers/BookmarkDataSlice";
 import { bookmarkToggle } from "@/ReduxToolkit/Reducers/Layout/LayoutReducer";
 import { SearchBarArrayType } from "@/Types/Layout";
-// import { SearchBarArrayType } from "@/Type/Header";
 import Link from "next/link";
 import { useState } from "react";
 import { Input } from "reactstrap";

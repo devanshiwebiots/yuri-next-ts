@@ -1824,7 +1824,6 @@
   }
   .home-card-1 {
     position: absolute;
-    // height: 215px;
     height: calc(130px + (215 - 130) * ((100vw - 320px) / (1920 - 320)));
     top: 20%;
     left: -118px;
@@ -1843,7 +1842,6 @@
     }
   }
   .home-card-2 {
-    // height: 172px;
     height: calc(112px + (172 - 122) * ((100vw - 320px) / (1920 - 320)));
     position: absolute;
     top: 20%;

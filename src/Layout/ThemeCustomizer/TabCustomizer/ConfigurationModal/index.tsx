@@ -1,22 +1,32 @@
 import { Cancel, ConfigurationTitle, CopyTextButton } from "@/Constants";
 import { ConfigurationProps } from "@/Types/Layout";
-// import CopyToClipboard from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
 import { Button, Container, Modal, ModalBody, ModalFooter, ModalHeader, Row } from "reactstrap";
 import ConfigDB from "../../../../Config/ThemeConfig";
 import ConfigurationContent from "./ConfigurationContent";
 
 export default function Configuration({ modal, toggle }: ConfigurationProps) {
-  const handleCopy = () => {
-    toast.success("Code Copied to clipboard !", {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });
+ 
+  const handleThemeCopy = async () => {
+    try {
+      const configDB = ConfigDB;
+      await navigator.clipboard.writeText(JSON.stringify(configDB));
+      toast.success("Code copied to clipboard!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        theme: "light",
+      });
+    } catch (err) {
+      toast.error("Failed to copy text to clipboard.", {
+        position: "bottom-right",
+        autoClose: 3000,
+        closeOnClick: true,
+        theme: "light",
+      });
+    }
   };
-  const error = console.error;
-  console.error = (...args: any) => {
-    if (/defaultProps/.test(args[0])) return;
-    error(...args);
-  };
+
   return (
     <Modal isOpen={modal} toggle={toggle} className="modal-body" centered={true}>
       <ModalHeader toggle={toggle}>{ConfigurationTitle}</ModalHeader>
@@ -32,11 +42,9 @@ export default function Configuration({ modal, toggle }: ConfigurationProps) {
         </Container>
       </ModalBody>
       <ModalFooter>
-        {/* <CopyToClipboard text={JSON.stringify(ConfigDB)}>
-          <Button color="primary" className="notification" onClick={handleCopy}>
+          <Button color="primary" className="notification" onClick={handleThemeCopy}>
             {CopyTextButton}
           </Button>
-        </CopyToClipboard> */}
         <Button color="secondary" onClick={toggle}>
           {Cancel}
         </Button>

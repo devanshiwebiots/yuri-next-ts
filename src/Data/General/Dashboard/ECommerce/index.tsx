@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Href, ImagePath } from "@/Constants";
 import { CustomComponentProps, RecentOrderTypes, StockReportTypes } from "@/Types/Dashboard";
 import { ApexOptions } from "apexcharts";
@@ -286,9 +285,6 @@ export const RevenueAndOrderChartOptions:  any = {
     tickAmount: 4,
     tickPlacement: "between",
     labels: {
-      formatter: function (val) {
-        return val + "K";
-      },
       offsetX: -5,
     },
   },
@@ -464,50 +460,43 @@ export const RecentOrderColumns: TableColumn<RecentOrderTypes>[] = [
   {
       name: "Order ID",
       selector: (row) => row.orderId,
-      sortable: true,
-      center: false,
+      sortable: true,      
       cell: (row) => <CustomOrderId span={row.orderId} />,
   },
   {
       name: "Customer",
       selector: (row) => row.name,
-      sortable: true,
-      center: false,
+      sortable: true,      
       cell: (row) => <CustomImage src={row.image} name={row.name} />,
   },
   {
       name: "Product",
       selector: (row) => row.product,
-      sortable: true,
-      center: false,
+      sortable: true,      
       cell: (row) => <CustomProduct span={row.product} />,
   },
   {
       name: "Amount",
       selector: (row) => row.amount,
-      sortable: true,
-      center: false,
+      sortable: true,      
       cell: (row) => <CustomAmount span={row.amount} />,
   },
   {
       name: "Vendor",
       selector: (row) => row.vendor,
-      sortable: true,
-      center: false,
+      sortable: true,      
       cell: (row) => <CustomVendor span={row.vendor} />,
   },
   {
       name: "Status",
       selector: (row) => row.statusText,
-      sortable: true,
-      center: false,
+      sortable: true,      
       cell: (row) => <CustomBadge span={row.statusText} color={row.statusColor} />,
   },
   {
       name: "Rating",
       selector: (row) => row.ratingText,
-      sortable: true,
-      center: false,
+      sortable: true,      
       cell: (row) => <CustomRating span={row.ratingText} value={row.ratingValue} />,
   },
 ];
@@ -821,42 +810,42 @@ export const StockReportColumns: TableColumn<StockReportTypes>[] = [
       name: "Item",
       selector: (row) => row.item,
       sortable: true,
-      center: false,
+      
       cell: (row) => <CustomProduct span={row.item} spanClass="f-w-500 f-14" />,
   },
   {
       name: "Id",
       selector: (row) => row.orderId,
       sortable: true,
-      center: false,
+      
       cell: (row) => <CustomOrderId span={row.orderId} />,
   },
   {
       name: "Amount",
       selector: (row) => row.amount,
       sortable: true,
-      center: false,
+      
       cell: (row) => <CustomAmount span={row.amount} />,
   },
   {
       name: "Date",
       selector: (row) => row.date,
       sortable: true,
-      center: false,
+      
       cell: (row) => <CustomProduct span={row.date} spanClass="f-w-500" />,
   },
   {
       name: "Status",
       selector: (row) => row.statusText,
       sortable: true,
-      center: false,
+      
       cell: (row) => <CustomBadge span={row.statusText} color={row.statusColor} spanClass="f-w-500" />,
   },
   {
       name: "QLT",
       selector: (row) => row.quantity,
       sortable: true,
-      center: false,
+      
       cell: (row) => <CustomProduct span={row.quantity} spanClass="f-w-500" />,
   },
 ];

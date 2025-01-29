@@ -1857,36 +1857,32 @@ export const JavaScriptSourceColumn : TableColumn<AjaxSourcedColumnsInterface>[]
     name: "Name",
     selector: (row) => row.name,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Position",
     selector: (row) => row.position,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Office",
     selector: (row) => row.office,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Extn.",
     selector: (row) => row.extends,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Start Date",
     selector: (row) => row.date,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Salary",
     selector: (row) => row.salary,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
 ];

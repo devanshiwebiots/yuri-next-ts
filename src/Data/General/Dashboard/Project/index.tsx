@@ -436,48 +436,43 @@ export const projectsStatusColumn: TableColumn<ProjectDataTypes>[] = [
     name: "Project",
     selector: (row) => row.project,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Team",
     selector: (row) => row.extraTeam,
     sortable: true,
-    center: false,
+    
     cell: (row) => <CustomTeam data={row.team} extra={row.extraTeam} />,
   },
   {
     name: "Start Date",
     selector: (row) => row.startDate,
-    sortable: true,
-    center: false,
+    sortable: true,    
     cell: (row) => <CustomDate span={row.startDate} />,
   },
   {
     name: "Due Date",
     selector: (row) => row.dueDate,
-    sortable: true,
-    center: false,
+    sortable: true,    
     cell: (row) => <CustomDate span={row.dueDate} />,
   },
   {
     name: "Progress",
     selector: (row) => row.progressValue,
-    sortable: true,
-    center: false,
+    sortable: true,    
     cell: (row) => <CommonProgress value={row.progressValue} color={row.progressColor} />,
   },
   {
     name: "Status",
     selector: (row) => row.status,
-    sortable: true,
-    center: false,
+    sortable: true,    
     cell: (row) => <CustomBadge span={row.status} color={row.progressColor} spanClass="" />,
   },
   {
     name: "Action",
     selector: (row) => row.action,
-    sortable: true,
-    center: false,
+    sortable: true,    
     cell: () => {
       return <CommonDropdown dropDownList={actionDropdownList} dropDownClass="icon-dropdown text-center" dropDownIcon end />;
     },

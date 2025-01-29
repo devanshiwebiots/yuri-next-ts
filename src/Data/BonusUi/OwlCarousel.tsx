@@ -393,8 +393,8 @@ export const MouseOverSubTitle = [
 ];
 
 export const CrossFadeCarouselData = [
-  { id: 1, image: "1.jpg" },
-  { id: 2, image: "11.jpg" },
-  { id: 3, image: "7.jpg" },
-  { id: 4, image: "10.jpg" },
+  { id: 1, image: "slider/1.jpg" },
+  { id: 2, image: "slider/11.jpg" },
+  { id: 3, image: "slider/7.jpg" },
+  { id: 4, image: "slider/10.jpg" },
 ];

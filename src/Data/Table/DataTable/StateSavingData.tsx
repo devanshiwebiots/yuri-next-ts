@@ -679,7 +679,7 @@ export const StateSavingColumns : TableColumn<StateSavingTableDataType>[] = [
     name: "Start Date",
     selector: (row) => row["startDate"],
     sortable: true,
-    center: true,  },
+  },
   {
     name: "Salary",
     selector: (row) => `${row.salary}`,

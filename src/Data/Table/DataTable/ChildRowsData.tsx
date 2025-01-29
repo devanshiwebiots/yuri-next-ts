@@ -11,25 +11,21 @@ export const ChildRowColumn: TableColumn<ZeroConfigurationTableColumnsType>[] = 
   {
     name: "Name",
     selector: (row) => row["name"],
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Position",
     selector: (row) => `${row.position}`,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Office",
     selector: (row) => `${row.office}`,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Salary",
     selector: (row) => `${row.salary}`,
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
 ];

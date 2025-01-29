@@ -1879,7 +1879,7 @@ export const ACECodeEditor: string = "ACE Code Editor";
 export const JavascriptModeTitle: string = "Javascript Mode";
 export const HTMLModeHeading: string = "HTML Mode";
 export const CSSModeHeading: string = "CSS Mode";
-export const PhpModeTitle: string = "Php Mode";
+export const JavaModeTitle: string = "Java Mode";
 
 //Knowledgebase
 export const KnowledgebaseHelpQue: string = "How Can I help you?";
@@ -2027,22 +2027,14 @@ export const AudioTesting: string = "Audio testing";
 export const MusicalTrendsAndPredictability: string = "Musical trends and predictability";
 export const WebDesignersMeeUp: string = "Web-designer's meet-up";
 export const PleaseMeetUp: string = "Please! Meet-up";
-// export const HorizontalTimelines: string = "Horizontal Timeline ";
 export const ReadMoreTour = "ReadMore";
 export const MyResolutions: string = "My Resolutions";
 export const MyResolutionsFor2024: string = "My Resolutions for 2024";
 export const Resolutions: string = "Resolutions";
 export const DesignerTitle: string = "Designer";
 export const CarouselText: string = "Research about most recent design trends.";
-// export const BasicTimelines: string = "Basic Timeline";
-// export const HoveringTimelines: string = "Hovering Timeline";
 export const MollyBoake: string = "Molly Boake";
-// export const OfwrriorCompanys: string = "Ofwrrior Company";
-// export const USMeeting: string = "US Meeting";
-// export const VariationTimelines = 'Variation Timeline';
-// export const UpdatedProduct: string = "Updated Product";
 
-//Ecommerce - Pricing
 //Ecommerce - Recent Orders
 export const RecentOrders: string = "Recent Orders";
 export const Processing: string = "Processing";
@@ -2083,32 +2075,6 @@ export const BecomeMembers: string = "Become Member";
 export const BecomSignUpeMembers: string = "Sign Up";
 export const SimplePricingCards: string = "Simple Pricing Card";
 export const YourTotalBalance: string = "768,987.90";
-
-// //Ecommerce - Recent Orders
-// export const RecentOrders: string = "Recent Orders";
-// export const Processing: string = "Processing";
-// export const Shipped: string = "Shipped";
-// export const ShippedOrder: string = "Shipped Orders";
-// export const CancelledOrder: string = "Cancelled Orders";
-// export const Cancelled: string = "Cancelled";
-// export const OrdersHistory: string = "Orders History";
-
-// //Ecommerce - Payment Details
-// export const PaymentDetails: string = "Payment Details";
-// export const NameOnCard: string = "Name on card";
-// export const CreditCards: string = "Credit Card";
-// export const DebitCards: string = "Debit Card";
-// export const FullNameHere: string = "Full name here";
-// export const CVC: string = "CVC";
-// export const Pincode: string = "Pincode";
-// export const AcHolderName: string = "AC Holder name";
-// export const AccountNumber: string = "Account number";
-// export const IcfcCode: string = "ICFC code";
-// export const OtherDetails: string = "Other Details";
-// export const Cod: string = "COD";
-// export const Emi: string = "EMI";
-// export const NetBankings: string = "Net Banking";
-// export const AddProduct: string = "Add Product";
 
 //Ecommerce - Product page
 export const ProductPage: string = "Product Page";

@@ -1,28 +1,14 @@
+import SessionWrapper from "@/CommonComponents/SessionWrapper";
+import NoSsr from "@/utils/NoSsr";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getServerSession } from "next-auth";
 import { ToastContainer } from "react-toastify";
 import "../index.scss";
-import MainProvider from "./MainProvider";
-import NoSsr from "@/utils/NoSsr";
-import { detectLanguage } from "./i18n/server";
-import { I18nProvider } from "./i18n/i18n-context";
-import { Inter, Nunito_Sans } from "next/font/google";
-import SessionWrapper from "@/CommonComponents/SessionWrapper";
 import { authoption } from "./api/auth/[...nextauth]/authOption";
-import { getServerSession } from "next-auth";
+import { I18nProvider } from "./i18n/i18n-context";
+import { detectLanguage } from "./i18n/server";
+import MainProvider from "./MainProvider";
 
-// const inter = Inter({
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-//   display: "swap", // Optional: optimize loading strategy
-//   variable: "--font-inter",
-// });
-
-// const nunitoSans = Nunito_Sans({
-//   subsets: ["latin"],
-//   weight: ["300", "400", "700", "800", "900"],
-//   display: "swap", // Optional: optimize loading strategy
-//   variable: "--font-nunito",
-// });
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const lng = await detectLanguage();
   const session = await getServerSession(authoption);

@@ -29,43 +29,7 @@ export default function SidebarType() {
     });
   }, [sidebar_types]);
 
-  // useEffect(() => {
-  //   if (window.innerWidth <= 1199) {
-  //     console.log('aefsrgsdrgdsrd')
-  //     window.addEventListener("resize", () => {
-  //       if (window.innerWidth <= 1199) {
-  //         // console.log('aefsrgsdrgdsrd')
-  //         document.getElementById("sidebar-wrapper")?.classList.add("close_icon");
-  //         document.getElementById("page-header")?.classList.add("close_icon");
-  //       }
-  //     });
-  //   }
-  // }, [])
-
-  // useEffect(() => {
-  //   console.log('i am entered in pussy');
-
-  //   const handleResize = () => {
-  //     console.log('i am licking pussy');
-  //     if (window.innerWidth <= 1199) {
-  //       console.log('i am licking pussy by applying sendha namak');
-  //       document.getElementById("sidebar-wrapper")?.classList.add("close_icon");
-  //       document.getElementById("page-header")?.classList.add("close_icon");
-  //     }
-  //   };
-
-  //   // handleResize(); // Initial check
-  //   window.addEventListener("resize", handleResize);
-
-  //   // Cleanup function
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
-
-
-  // Sidebar will not show ui below screen size less than 992 px
+    // Sidebar will not show ui below screen size less than 992 px
   useEffect(() => {
     if (sideBarToggle != "close_icon") {
       window.addEventListener("resize", () => {
@@ -73,10 +37,6 @@ export default function SidebarType() {
           document.getElementById("sidebar-wrapper")?.classList?.add("close_icon");
           document.getElementById("page-header")?.classList?.add("close_icon");
         }
-        //  else if (window.innerWidth < 992) {
-        //   document.getElementById("sidebar-wrapper")?.classList.add("close_icon");
-        //   document.getElementById("page-header")?.classList.add("close_icon");
-        // }
         else {
           document.getElementById("sidebar-wrapper")?.classList?.remove("close_icon");
           document.getElementById("page-header")?.classList?.remove("close_icon");

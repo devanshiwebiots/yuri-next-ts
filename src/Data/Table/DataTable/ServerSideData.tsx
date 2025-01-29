@@ -465,37 +465,31 @@ export const ServerData = [
     {
       name: "First Name",
       selector: (row) => row.name,
-      sortable: true,
-      center: false,
+      sortable: true,      
     },
     {
       name: "Last Name",
       selector: (row) => row.lastName,
-      sortable: true,
-      center: false,
+      sortable: true,      
     },
     {
       name: "position",
       selector: (row) => row.position,
-      sortable: true,
-      center: false,
+      sortable: true,      
     },
     {
       name: "office",
       selector: (row) => row.office,
-      sortable: true,
-      center: false,
+      sortable: true,      
     },
     {
       name: "Start Date",
       selector: (row) => row.date,
-      sortable: true,
-      center: false,
+      sortable: true,      
     },
     {
       name: "Salary",
       selector: (row) => row.salary,
-      sortable: true,
-      center: false,
+      sortable: true,      
     },
   ];

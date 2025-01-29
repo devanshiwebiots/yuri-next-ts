@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { ImagePath } from "@/Constants";
 import { ApexOptions } from "apexcharts";
 
@@ -607,7 +606,6 @@ export const EarningChartOptions: ApexOptions = {
       borderRadius: 4,
       horizontal: false,
       columnWidth: "40%",
-      endingShape: "rounded",
     },
   },
   grid: {
@@ -648,10 +646,6 @@ export const EarningChartOptions: ApexOptions = {
     },
   },
   colors: ["#009DB5", "#F99B0D"],
-  // fill: {
-  //   type: ["solid", "gradient"],
-  //   opacity: 1,
-  // },
   legend: {
     show: false,
   },
@@ -761,11 +755,6 @@ export const ProectOverviewChartOptions: ApexOptions = {
     enabled: false,
   },
   states: {
-    normal: {
-      filter: {
-        type: "none",
-      },
-    },
     hover: {
       filter: {
         type: "none",
@@ -871,7 +860,6 @@ export const ProjectOverviewChart2Options: ApexOptions = {
   yaxis: {
     min: 0,
     tickAmount: 4,
-    tickPlacement: "between",
     labels: {
       formatter: function (val) {
         return val + "K";

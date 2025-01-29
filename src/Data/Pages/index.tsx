@@ -1,10 +1,5 @@
 import * as Yup from "yup";
 
-// export const SamplePageData = [
-//     {
-//       text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit",
-//     },
-//   ];
 export const samplePageSubTitle = [
   {
       text: 'Here you can enter a sub-title for your card.'

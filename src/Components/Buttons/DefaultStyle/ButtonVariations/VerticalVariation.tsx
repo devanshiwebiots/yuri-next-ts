@@ -3,7 +3,6 @@ import { verticalVariationData, verticalVariationDropdownData } from '@/Data/But
 import { Fragment } from 'react'
 import { Button, ButtonGroup, Col, Input, Label } from 'reactstrap'
 import DropdownCommon from '../../CommonButtonDropdown'
-// import DropdownCommon from '../../../../Utils/CommonComponents/DropdownCommon'
 
 export default function VerticalVariation() {
     return (

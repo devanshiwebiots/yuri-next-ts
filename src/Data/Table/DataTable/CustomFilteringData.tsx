@@ -759,36 +759,31 @@ export const FilteringTableColumn: TableColumn<DeleteRowDataProp>[] = [
     name: "Employee Name",
     cell: (row) => row["name"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "position",
     selector: (row) => row["position"],
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "office",
     selector: (row) => row["office"],
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "age",
     selector: (row) => row["age"],
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "Start Date",
     selector: (row) => row["startDate"],
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
   {
     name: "salary",
     selector: (row) => row["salary"],
-    sortable: true,
-    center: false,
+    sortable: true,    
   },
 ];

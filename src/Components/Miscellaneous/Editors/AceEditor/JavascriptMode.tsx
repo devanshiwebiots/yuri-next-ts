@@ -1,31 +1,28 @@
 import { Card, CardBody, Col } from 'reactstrap';
-// import AceEditor from 'react-ace';
-// import 'ace-builds/src-noconflict/mode-java';
-// import 'ace-builds/src-noconflict/theme-monokai';
-// import 'ace-builds/src-noconflict/ext-language_tools';
+import { Highlight, themes } from "prism-react-renderer";
 import { JavascriptModeTitle } from '@/Constants';
 import CommonCardHeader from '@/CommonComponents/CommonCardHeader';
 import { javascriptData } from '@/Data/Miscellaneous/Editors';
 
 const JavascriptMode = () => {
   return (
-    <Col xl='6'>
+    <Col xl="6">
       <Card>
         <CommonCardHeader title={JavascriptModeTitle} />
         <CardBody>
-          {/* <AceEditor
-            className="aceEditor w-auto"
-            mode="javascript"
-            theme="monokai"
-            value={javascriptData}
-            name="blah2"
-            setOptions={{ useWorker: false }}
-            fontSize={14}
-            showPrintMargin={true}
-            showGutter={true}
-            editorProps={{ $blockScrolling: true }}
-            highlightActiveLine={true}
-          /> */}
+          <Highlight theme={themes.vsDark} code={javascriptData} language="javascript">
+            {({ style, tokens, getLineProps, getTokenProps }) => (
+              <pre style={style}>
+                {tokens.map((line, i) => (
+                  <div key={i} {...getLineProps({ line })}>
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token })} />
+                    ))}
+                  </div>
+                ))}
+              </pre>
+            )}
+          </Highlight>
         </CardBody>
       </Card>
     </Col>

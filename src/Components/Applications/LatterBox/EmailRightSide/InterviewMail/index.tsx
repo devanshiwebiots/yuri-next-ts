@@ -7,16 +7,16 @@ import { useAppSelector } from "@/ReduxToolkit/Hooks";
 
 const InterviewMail = () => {
   const {interviewEmail} = useAppSelector((state)=>state.letterBox)
-  const componentRef = useRef<HTMLDivElement | null>(null);
+   const contentRef = useRef<HTMLDivElement | null>(null);
 
-  const handlePrintData = useReactToPrint({
-    content: () => componentRef.current,
-  });
+   const handlePrint = useReactToPrint({
+     contentRef,
+   });
   
   return (
     <Card className={`email-body email-read ${interviewEmail ? "show" : "hide"}`}>
       <InterviewMailHeader />
-      <InterviewMailBody ref={componentRef} handlePrintData={handlePrintData} />
+      <InterviewMailBody ref={contentRef} handlePrintData={handlePrint} />
     </Card>
   );
 };

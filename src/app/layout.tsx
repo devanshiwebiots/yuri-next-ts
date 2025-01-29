@@ -1,0 +1,56 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ToastContainer } from "react-toastify";
+import "../index.scss";
+import MainProvider from "./MainProvider";
+import NoSsr from "@/utils/NoSsr";
+import { detectLanguage } from "./i18n/server";
+import { I18nProvider } from "./i18n/i18n-context";
+import { Inter, Nunito_Sans } from "next/font/google";
+import SessionWrapper from "@/CommonComponents/SessionWrapper";
+import { authoption } from "./api/auth/[...nextauth]/authOption";
+import { getServerSession } from "next-auth";
+
+// const inter = Inter({
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   display: "swap", // Optional: optimize loading strategy
+//   variable: "--font-inter",
+// });
+
+// const nunitoSans = Nunito_Sans({
+//   subsets: ["latin"],
+//   weight: ["300", "400", "700", "800", "900"],
+//   display: "swap", // Optional: optimize loading strategy
+//   variable: "--font-nunito",
+// });
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const lng = await detectLanguage();
+  const session = await getServerSession(authoption);
+
+  return (
+    <I18nProvider language={lng}>
+      <html lang={lng}>
+        <head>
+          <title>Yuri - Premium Admin Template</title>
+          <link rel='icon' href={`/assets/images/logo/logo-icon.png`} type='image/x-icon' />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Nunito+Sans:ital,wght@0,300;0,400;0,700;0,800;0,900;1,700&amp;display=swap' rel='stylesheet' />
+          <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAjeJEPREBQFvAIqDSZliF0WjQrCld-Mh0' async></script>
+        </head>
+        <body suppressHydrationWarning={true}>
+          <NoSsr>
+            <SessionWrapper session={session}>
+              <MainProvider>
+                <SpeedInsights />
+                <ToastContainer />
+                {children}
+              </MainProvider>
+            </SessionWrapper>
+          </NoSsr>
+        </body>
+      </html>
+    </I18nProvider>
+  );
+}

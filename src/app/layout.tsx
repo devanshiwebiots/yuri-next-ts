@@ -8,6 +8,7 @@ import { authoption } from "./api/auth/[...nextauth]/authOption";
 import { I18nProvider } from "./i18n/i18n-context";
 import { detectLanguage } from "./i18n/server";
 import MainProvider from "./MainProvider";
+import ErrorBoundary from "@/CommonComponents/ErrorBoundry";
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const lng = await detectLanguage();
@@ -26,6 +27,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAjeJEPREBQFvAIqDSZliF0WjQrCld-Mh0' async></script>
         </head>
         <body suppressHydrationWarning={true}>
+          <ErrorBoundary>
           <NoSsr>
             <SessionWrapper session={session}>
               <MainProvider>
@@ -35,6 +37,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </MainProvider>
             </SessionWrapper>
           </NoSsr>
+          </ErrorBoundary>
         </body>
       </html>
     </I18nProvider>
